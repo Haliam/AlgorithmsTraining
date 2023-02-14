@@ -2,8 +2,8 @@
 
 using Algorithms.Easy.CountZeros;
 
-string number = "0000010001000111";
+string number = "000001000001000111";
 
-var result = CountZerosV4.CalculateMaxZerosBetweenTwoOne(number);
+var result = CountZerosV1.CalculateMaxZerosBetweenTwoOne(number);
 
 Console.WriteLine(result);
