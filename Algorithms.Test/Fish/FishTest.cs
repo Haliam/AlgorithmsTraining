@@ -6,10 +6,13 @@ namespace Algorithms.Test.Fish
     public class FishTest : IDisposable
     {
         [Theory]
-        [MemberData(nameof(FishData.Data), MemberType = typeof(FishData))]
-        public void CountLiveFish(int[] a, int[] b, int expected)
+        [MemberData(nameof(FishData.DataToSuccess), MemberType = typeof(FishData))]
+        public void GetNumberOfLiveFish_ShouldReturnExpected(int[] arrayA, int[] arrayB, int expected)
         {
-            var result = FishSolution.GetNumberOfLiveFish(a, b);
+            var result = FishSolution.GetNumberOfLiveFish(arrayA, arrayB);
+
+            result.Should().NotBe(null);
+
             result.Should().Be(expected);
         }
 
