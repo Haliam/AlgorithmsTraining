@@ -1,0 +1,51 @@
+﻿Fish
+
+Se dan dos matrices no vacías A y B formadas por N números enteros. 
+Las matrices A y B representan N peces voraces en un río, ordenados río abajo a lo largo de la corriente del río.
+
+Los peces están numerados de 0 a N - 1. Si P y Q son dos peces y P < Q, entonces el pez P está inicialmente aguas arriba del pez Q. 
+Inicialmente, cada pez tiene una posición única.
+
+El número de pez P está representado por A[P] y B[P]. La matriz A contiene los tamaños de los peces. 
+Todos sus elementos son únicos. La matriz B contiene las direcciones de los peces. Contiene sólo 0s y/o 1s, donde:
+
+0 representa un pez que fluye río arriba,
+1 representa un pez que fluye río abajo.
+
+Si dos peces se mueven en direcciones opuestas y no hay otros peces (vivos) entre ellos, acabarán encontrándose. 
+En ese caso, sólo uno de los peces puede seguir vivo: el pez más grande se come al más pequeño. 
+Más concretamente, decimos que dos peces P y Q se encuentran cuando P < Q, B[P] = 1 y B[Q] = 0, y no hay peces vivos entre ellos. 
+Después de encontrarse:
+
+Si A[P] > A[Q] entonces P se come a Q, y P seguirá fluyendo río abajo,
+Si A[Q] > A[P] entonces Q se come a P, y Q seguirá fluyendo río arriba.
+
+Suponemos que todos los peces fluyen a la misma velocidad. Es decir, los peces que se mueven en la misma dirección nunca se encuentran. 
+El objetivo es calcular el número de peces que seguirán vivos.
+
+Por ejemplo, consideremos matrices A y B tales que:
+
+  A[0] = 4 B[0] = 0
+  A[1] = 3 B[1] = 1
+  A[2] = 2 B[2] = 0
+  A[3] = 1 B[3] = 0
+  A[4] = 5 B[4] = 0
+
+Inicialmente todos los peces están vivos y todos, excepto el pez número 1, se mueven río arriba. 
+El pez número 1 se encuentra con el pez número 2 y se lo come, luego se encuentra con el pez número 3 y también se lo come. 
+Finalmente, se encuentra con el pez número 4 y éste se lo come. Los dos peces restantes, el 0 y el 4, nunca se encuentran y, por tanto, siguen vivos.
+
+Escribe una función:
+
+class Solución { public int solución(int[] A, int[] B); }
+
+que, dadas dos matrices no vacías A y B formadas por N enteros, devuelva el número de peces que seguirán vivos.
+
+Por ejemplo, dadas las matrices mostradas anteriormente, la función debería devolver 2, como se ha explicado anteriormente.
+
+Escribe un algoritmo eficiente para los siguientes supuestos:
+
+N es un entero dentro del intervalo [1..100.000];
+cada elemento de la matriz A es un entero dentro del intervalo [0..1.000.000.000];
+cada elemento de la matriz B es un número entero que puede tener uno de los siguientes valores: 0, 1;
+los elementos de A son todos distintos.
