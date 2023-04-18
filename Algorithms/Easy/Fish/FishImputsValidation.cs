@@ -4,23 +4,23 @@
 	{
 		readonly bool result = true;
 
-		public bool ValidateImputs(int[] arrayA, int[] arrayB)
+		public bool ValidateImputs(int[] A, int[] B)
 		{
-			return ArraysHaveSameLenght(arrayA, arrayB) &&
-				   NumberOfFishInTheRiverIsValid(arrayA, 0, 100000) &&
-				   ArrayElementsAreAllIntegerBetweenRange(arrayA, 0, 1000000000) &&
-				   ArrayElementsAreAllIntegerBetweenRange(arrayB, 0, 1) &&
-				   ArrayElementsAreAllDiferents(arrayA);
+			return ArraysHaveSameLenght(A, B) &&
+				   NumberOfFishInTheRiverIsValid(A, 0, 100000) &&
+				   ArrayElementsAreAllIntegerBetweenRange(A, 0, 1000000000) &&
+				   ArrayElementsAreAllIntegerBetweenRange(B, 0, 1) &&
+				   ArrayElementsAreAllDiferents(A);
 		}
 
-		public bool ArraysHaveSameLenght(int[] arrayA, int[] arrayB)
+		public bool ArraysHaveSameLenght(int[] A, int[] B)
 		{
-			return arrayA.Length == arrayB.Length;
+			return A.Length == B.Length;
 		}
 
-		public bool NumberOfFishInTheRiverIsValid(int[] arrayA, int minValue, int maxValue)
+		public bool NumberOfFishInTheRiverIsValid(int[] A, int minValue, int maxValue)
 		{
-			return arrayA.Length > minValue && arrayA.Length < maxValue;
+			return A.Length > minValue && A.Length < maxValue;
 		}
 
 		public bool ArrayElementsAreAllIntegerBetweenRange(int[] array, int minValue, int maxValue)
@@ -36,13 +36,13 @@
 			return result;
 		}
 
-		public bool ArrayElementsAreAllDiferents(int[] arrayA)
+		public bool ArrayElementsAreAllDiferents(int[] A)
 		{
-			for (int i = 0; i < arrayA.Length - 1; i++)
+			for (int i = 0; i < A.Length - 1; i++)
 			{
-				for (int j = i + 1; j < arrayA.Length; j++)
+				for (int j = i + 1; j < A.Length; j++)
 				{
-					if (arrayA[i] == arrayA[j])
+					if (A[i] == A[j])
 					{
 						return false;
 					}
