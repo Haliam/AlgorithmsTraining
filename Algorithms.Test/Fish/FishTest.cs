@@ -3,20 +3,24 @@ using FluentAssertions;
 
 namespace Algorithms.Test.Fish
 {
-    public class FishTest : IDisposable
+    public class FishTest 
     {
         [Theory]
-        [MemberData(nameof(FishData.Data), MemberType = typeof(FishData))]
-        public void CountLiveFish(int[] a, int[] b, int expected)
+        [MemberData(nameof(FishData.DataToSuccess), MemberType = typeof(FishData))]
+        public void GetNumberOfLiveFish_ShouldReturnExpected(int[] arrayA, int[] arrayB, int expected)
         {
-            var result = FishSolution.GetNumberOfLiveFish(a, b);
+            var result = new FishSolution().CalculateLifeFishOnRiver(arrayA, arrayB);
+
             result.Should().Be(expected);
         }
 
-
-        public void Dispose()
+        [Theory]
+        [MemberData(nameof(FishData.DataToFail), MemberType = typeof(FishData))]
+        public void GetNumberOfLiveFish_ShouldReturnNegativeValue(int[] arrayA, int[] arrayB, int expected)
         {
-            throw new NotImplementedException();
+            var result = new FishSolution().CalculateLifeFishOnRiver(arrayA, arrayB);
+
+            result.Should().Be(expected);
         }
     }
 }
