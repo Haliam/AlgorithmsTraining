@@ -15,6 +15,6 @@ int[] arrayA = new int[] { 4, 3, 2, 1, 5 };
 
 int[] arrayB = new int[] { 0, 1, 0, 0, 0 };
 
-var result = new FishSolution().CalculateLifeFishOnRiver(arrayA, arrayB);
+var result = new FishStakSolution().CalculateLifeFishOnRiver(arrayA, arrayB);
 
 Console.WriteLine("The number of life fish are {0}.", result);
