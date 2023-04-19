@@ -1,12 +1,10 @@
-﻿using System.IO;
-
-namespace Algorithms.Easy.Fish
+﻿namespace Algorithms.Easy.Fish
 {
-    public class FishSolution
+    public class FishQueueSolution
     {
         public int CalculateLifeFishOnRiver(int[] A, int[] B)
         {
-            int result = 0;
+            int count = 0;
 
             bool imputsAreValid = new FishImputsValidation().ValidateImputs(A, B);
 
@@ -15,29 +13,30 @@ namespace Algorithms.Easy.Fish
                 return -1;
             }
 
-            Stack<int> stream = new Stack<int>();
+            Queue<int> queue = new Queue<int>();
 
             for (int i = 0; i < A.Length; i++)
             {
-                var fish = A[i];
-
                 if (B[i] == 1)
                 {
-                    stream.Push(fish);
+                    queue.Enqueue(A[i]);
                 }
 
-                if (stream.Count > 0 && fish > stream.Peek())
+                if (queue.Count > 0 && queue.First() < A[i])
                 {
-                    stream.Pop();
+                    queue.Dequeue();
+                    queue.Enqueue(A[i]);
                 }
 
-                if (stream.Count == 0)
+                if (queue.Count == 0)
                 {
-                    result++;
+                    count++;
                 }
             }
 
-            return result + stream.Count;
+            var result = count + queue.Count;
+
+            return result;
         }
     }
 }
