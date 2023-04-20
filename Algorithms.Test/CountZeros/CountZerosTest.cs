@@ -1,6 +1,3 @@
-using Algorithms.Easy.CountZeros;
-using FluentAssertions;
-
 namespace Algorithms.Test
 {
     public class CountZerosTest : IDisposable
