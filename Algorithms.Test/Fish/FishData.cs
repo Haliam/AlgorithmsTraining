@@ -2,7 +2,7 @@
 {
     public class FishData
     {
-        public static IEnumerable<object[]> DataToSuccess =>
+        public static IEnumerable<object[]> HungryFishSuccess =>
         new List<object[]>
         {
             new object[]
@@ -25,13 +25,13 @@
             },
             new object[]
             {
-                new int[]{ 4, 3, 2, 1, 5 },
-                new int[]{ 0, 0, 0, 0, 0 },
+                new int[] { 11, 4, 3, 2, 1, 5, 6, 7, 8, 10},
+                new int[] { 0, 0, 1, 0, 0, 0, 0, 1, 1, 0},
                 5
             },
         };
 
-        public static IEnumerable<object[]> DataToFail =>
+        public static IEnumerable<object[]> HungryFishFail =>
         new List<object[]>
         {
            new object[]
@@ -52,6 +52,24 @@
                new int[]{ 0, 1, 0, 0, 0 },
                -1
            },
-        };     
+        };
+
+        public static IEnumerable<object[]> HungryFishSuccesss =>
+        new List<object[]>
+        {
+            new object[]
+            {
+                new int[] { 11, 4, 3, 2, 1, 5, 6, 7, 8, 10},
+                new int[] { 0, 0, 1, 0, 0, 0, 0, 1, 1, 0},
+                //new List<Fish>
+                //{
+                //    new Fish(0, 11, StreamDirection.Up),
+                //    new Fish(1, 4, StreamDirection.Up),
+                //    new Fish(5, 5, StreamDirection.Up),
+                //    new Fish(6, 6, StreamDirection.Up),
+                //    new Fish(9, 10, StreamDirection.Up)
+                //}
+            }
+        };
     }
 }
