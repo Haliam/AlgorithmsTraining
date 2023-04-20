@@ -1,15 +1,13 @@
 ﻿namespace Algorithms.Easy.Fish
 {
-	public class FishImputsValidation
+	public class FishInputsValidation
 	{
-		readonly bool result = true;
-
-		public bool ValidateImputs(int[] A, int[] B)
+		public bool ValidateInputs(int[] A, int[] B)
 		{
 			return ArraysHaveSameLenght(A, B) &&
 				   NumberOfFishInTheRiverIsValid(A, 0, 100000) &&
-				   ArrayElementsAreAllIntegerBetweenRange(A, 0, 1000000000) &&
-				   ArrayElementsAreAllIntegerBetweenRange(B, 0, 1) &&
+				   ElementsBetweenRange(A, 0, 1000000000) &&
+				   ElementsBetweenRange(B, 0, 1) &&
 				   ArrayElementsAreAllDiferents(A);
 		}
 
@@ -23,7 +21,7 @@
 			return A.Length > minValue && A.Length < maxValue;
 		}
 
-		public bool ArrayElementsAreAllIntegerBetweenRange(int[] array, int minValue, int maxValue)
+		public bool ElementsBetweenRange(int[] array, int minValue, int maxValue)
 		{
 			foreach (var element in array)
 			{
@@ -33,7 +31,7 @@
 				}
 			}
 
-			return result;
+			return true;
 		}
 
 		public bool ArrayElementsAreAllDiferents(int[] A)
@@ -49,7 +47,7 @@
 				}
 			}
 
-			return result;
+			return true;
 		}
 	}
 }
