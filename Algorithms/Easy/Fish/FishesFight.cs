@@ -17,7 +17,7 @@
         {
             if (!ValidateInputs(sizes, directions))
             {
-                return null;
+                return new List<Fish>();
             }
 
             for (int i = 0; i < sizes.Length; i++)
@@ -30,7 +30,7 @@
 
                 PutFishesToFight(currentFishSize);
 
-                GetNonFightingFish(fish);
+                GetNonFightingFishes(fish);
             }
 
             GetTotalAliveFish();
@@ -57,7 +57,7 @@
             }
         }
 
-        private void GetNonFightingFish(Fish fish)
+        private void GetNonFightingFishes(Fish fish)
         {
             if (FishesStreamDown.Count == 0)
             {

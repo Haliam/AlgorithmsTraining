@@ -1,6 +1,6 @@
 ﻿namespace Algorithms.Easy.Fish
 {
-    public class FishFightStak
+    public class FishesFightQueue
     {
         public int CalculateLifeFishOnRiver(int[] A, int[] B)
         {
@@ -13,27 +13,28 @@
                 return -1;
             }
 
-            Stack<int> stack = new Stack<int>();
+            Queue<int> queue = new Queue<int>();
 
             for (int i = 0; i < A.Length; i++)
             {
                 if (B[i] == 1)
                 {
-                    stack.Push(A[i]);
+                    queue.Enqueue(A[i]);
                 }
 
-                if (stack.Count > 0 && A[i] > stack.Peek())
+                if (queue.Count > 0 && queue.First() < A[i])
                 {
-                    stack.Pop();
+                    queue.Dequeue();
+                    queue.Enqueue(A[i]);
                 }
 
-                if (stack.Count == 0)
+                if (queue.Count == 0)
                 {
                     count++;
                 }
             }
 
-            var result = count + stack.Count;
+            var result = count + queue.Count;
 
             return result;
         }
