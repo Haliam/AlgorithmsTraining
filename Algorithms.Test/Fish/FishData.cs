@@ -15,7 +15,6 @@
                     new Fish(4, 5, Direction.Up),
                 }
             },
-
             new object[]
             {
                 new int[] { 11, 4, 3, 2, 1, 5, 6, 7, 8, 10},
@@ -96,7 +95,7 @@
            },
         };
 
-        public static IEnumerable<object[]> FishesFightQueueSuccess =>
+       public static IEnumerable<object[]> FishesFightQueueSuccess =>
        new List<object[]>
        {
             new object[]
@@ -147,7 +146,5 @@
                -1
            },
         };
-
-
     }
 }
