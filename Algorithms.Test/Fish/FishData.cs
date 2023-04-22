@@ -1,8 +1,8 @@
-﻿namespace Algorithms.Test.Fish
+﻿namespace Algorithms.Test
 {
     public class FishData
     {
-        public static IEnumerable<object[]> HungryFishSuccess =>
+        public static IEnumerable<object[]> FishFightSuccess =>
         new List<object[]>
         {
             new object[]
@@ -31,7 +31,7 @@
             },
         };
 
-        public static IEnumerable<object[]> HungryFishFail =>
+        public static IEnumerable<object[]> FishFightFail =>
         new List<object[]>
         {
            new object[]
@@ -61,14 +61,14 @@
             {
                 new int[] { 11, 4, 3, 2, 1, 5, 6, 7, 8, 10},
                 new int[] { 0, 0, 1, 0, 0, 0, 0, 1, 1, 0},
-                //new List<Fish>
-                //{
-                //    new Fish(0, 11, StreamDirection.Up),
-                //    new Fish(1, 4, StreamDirection.Up),
-                //    new Fish(5, 5, StreamDirection.Up),
-                //    new Fish(6, 6, StreamDirection.Up),
-                //    new Fish(9, 10, StreamDirection.Up)
-                //}
+                new List<Fish>
+                {
+                    new Fish(0, 11, Direction.Up),
+                    new Fish(1, 4, Direction.Up),
+                    new Fish(5, 5, Direction.Up),
+                    new Fish(6, 6, Direction.Up),
+                    new Fish(9, 10, Direction.Up)
+                }
             }
         };
     }
