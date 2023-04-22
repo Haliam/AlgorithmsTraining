@@ -54,20 +54,48 @@
            },
         };
 
-        public static IEnumerable<object[]> HungryFishSuccesss =>
+        //public static IEnumerable<object[]> FishesFightSuccess =>
+        //new List<object[]>
+        //{
+        //    new object[]
+        //    {
+        //        new int[] { 11, 4, 3, 2, 1, 5, 6, 7, 8, 10},
+        //        new int[] { 0, 0, 1, 0, 0, 0, 0, 1, 1, 0},
+        //        new List<Fish>
+        //        {
+        //            new Fish(0, 11, Direction.Up),
+        //            new Fish(1, 4, Direction.Up),
+        //            new Fish(5, 5, Direction.Up),
+        //            new Fish(6, 6, Direction.Up),
+        //            new Fish(9, 10, Direction.Up)
+        //        }
+        //    }
+        //};
+
+        public static IEnumerable<object[]> FishesFightSuccess =>
+        new List<object[]>
+        {
+            new object[]
+            {
+                new int[] { 4, 3, 2, 1, 5 },
+                new int[] { 0, 1, 0, 0, 0 },
+                new List<Fish>
+                {
+                    new Fish(0, 4, Direction.Up),
+                    new Fish(4, 5, Direction.Up),
+                }
+            }
+        };
+
+        public static IEnumerable<object[]> FishesFightFail =>
         new List<object[]>
         {
             new object[]
             {
                 new int[] { 11, 4, 3, 2, 1, 5, 6, 7, 8, 10},
-                new int[] { 0, 0, 1, 0, 0, 0, 0, 1, 1, 0},
+                new int[] { 0, 0, 1, 0, 0, 0, 0, 1},
                 new List<Fish>
                 {
-                    new Fish(0, 11, Direction.Up),
-                    new Fish(1, 4, Direction.Up),
-                    new Fish(5, 5, Direction.Up),
-                    new Fish(6, 6, Direction.Up),
-                    new Fish(9, 10, Direction.Up)
                 }
             }
         };
