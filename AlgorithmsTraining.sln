@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithms.Test", "Algorith
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithms.Host", "Algorithms.Host", "{061044F0-A9CB-4E1C-A2B2-54ED411C596A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{EF52025D-4973-4058-B6C2-DFCBEC2A6F2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Algorithms.csproj", "{EF52025D-4973-4058-B6C2-DFCBEC2A6F2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Console", "Algorithms.Console\Algorithms.Console.csproj", "{C59FC1FC-B016-42E9-9850-E2171622AD8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms.Console", "Algorithms.Console\Algorithms.Console.csproj", "{C59FC1FC-B016-42E9-9850-E2171622AD8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Test", "Algorithms.Test\Algorithms.Test.csproj", "{2C978BC6-C643-465E-9385-8CE00CA73B1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms.Test", "Algorithms.Test\Algorithms.Test.csproj", "{2C978BC6-C643-465E-9385-8CE00CA73B1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
