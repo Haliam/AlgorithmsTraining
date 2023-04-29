@@ -1,42 +1,31 @@
+using Algorithms.Easy.BinaryGap;
+
 namespace Algorithms.Test
 {
-    public class CountZerosTest : IDisposable
+    public class CountZerosTest 
     {
         [Theory]
-        [MemberData(nameof(CountZerosData.BinaryNumber), MemberType = typeof(CountZerosData))]
-        public void CountZerosSuccessV1(string number, int expected)
+        [MemberData(nameof(CountZerosData.CountZerosSuccess), MemberType = typeof(CountZerosData))]
+        public void CountZerosSuccess(string number, int expected)
         {
-            var result = CountZerosV1.CalculateMaxZerosBetweenTwoOne(number);
+            var result = CountZeros.MaxZerosBetweenOnes(number);
             result.Should().Be(expected);
         }
 
         [Theory]
-        [MemberData(nameof(CountZerosData.BinaryNumber), MemberType = typeof(CountZerosData))]
-        public void CountZerosSuccessV2(string number, int expected)
+        [MemberData(nameof(CountZerosData.CountZerosSuccess), MemberType = typeof(CountZerosData))]
+        public void CountZerosGptSucces(string number, int expected)
         {
-            var result = CountZerosV2.CalculateMaxZerosBetweenTwoOne(number);
+            var result = CountZerosGpt.MaxZerosBetweenOnes(number);
             result.Should().Be(expected);
         }
 
         [Theory]
-        [MemberData(nameof(CountZerosData.BinaryNumber), MemberType = typeof(CountZerosData))]
-        public void CountZerosSuccessV3(string number, int expected)
+        [MemberData(nameof(CountZerosData.BinaryNumberValidationFail), MemberType = typeof(CountZerosData))]
+        public void BinaryNumberValidationFail(string number, bool expected)
         {
-            var result = CountZerosV3.CalculateMaxZerosBetweenTwoOne(number);
+            var result = BinaryNumberValidation.IsValid(number);
             result.Should().Be(expected);
-        }
-
-        [Theory]
-        [MemberData(nameof(CountZerosData.BinaryNumber), MemberType = typeof(CountZerosData))]
-        public void CountZerosSuccessV4(string number, int expected)
-        {
-            var result = CountZerosV4.CalculateMaxZerosBetweenTwoOne(number);
-            result.Should().Be(expected);
-        }
-
-        public void Dispose()
-        {
-            
         }
     }
 }

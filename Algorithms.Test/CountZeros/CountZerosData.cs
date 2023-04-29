@@ -2,7 +2,7 @@ namespace Algorithms.Test;
 
 public class CountZerosData
 {
-    public static IEnumerable<object[]> BinaryNumber =>
+    public static IEnumerable<object[]> CountZerosSuccess =>
         new List<object[]>
         {
             new object[]
@@ -25,65 +25,87 @@ public class CountZerosData
 
             new object[]
             {
+                "010100011",
+                3
+            },
+
+            new object[]
+            {
+                "101001",
+                2
+            },
+
+            new object[]
+            {
+                "00000000001010001",
+                3
+            },
+
+            new object[]
+            {
+                "10100010000000000",
+                3
+            }
+        };
+
+    public static IEnumerable<object[]> BinaryNumberValidationFail =>
+        new List<object[]>
+        {
+            new object[]
+            {
                 "111111",
-                0
+                false
             },
 
             new object[]
             {
                 "00000",
-                0
+                false
             },
             new object[]
             {
                 "100000",
-                0
+                false
             },
             new object[]
             {
                 "00001",
-                0
+                false
             },
             new object[]
             {
                 "01",
-                0
+                false
             },
             new object[]
             {
                 "10",
-                0
+                false
             },
             new object[]
             {
                 "1",
-                0
+                false
             },
             new object[]
             {
                 "0",
-                0
+                false
             },
             new object[]
             {
                 "-10",
-                0
+                false
             },
             new object[]
             {
                 "-1a0-1",
-                0
+                false
             },
             new object[]
             {
                 "-10-1",
-                0
-            },
-            new object[]
-            {
-                "010100011",
-                3
+                false
             }
         };
-
 }
