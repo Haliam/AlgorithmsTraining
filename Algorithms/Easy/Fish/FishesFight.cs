@@ -51,7 +51,7 @@
 
         private void PutFishesToFight(int currentFishSize)
         {
-            if (FishesStreamDown.Count > 0 && currentFishSize > FishesStreamDown.Peek().Size)
+            while (FishesStreamDown.Count > 0 && currentFishSize > FishesStreamDown.Peek().Size)
             {
                 FishesStreamDown.Pop();
             }

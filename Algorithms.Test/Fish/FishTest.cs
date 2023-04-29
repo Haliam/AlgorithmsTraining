@@ -29,22 +29,22 @@
             FishesFight.CalculateLifeFishOnRiver(sizes, directions).Should().BeEquivalentTo(expected);
 
         [Theory]
-        [MemberData(nameof(FishData.FishFightSuccess), MemberType = typeof(FishData))]
-        public void FishFightStakSuccess(int[] sizes, int[] directions, int expected) =>
+        [MemberData(nameof(FishData.FishesFightStakSuccess), MemberType = typeof(FishData))]
+        public void FishesFightStakSuccess(int[] sizes, int[] directions, int expected) =>
             FishesFightStak.CalculateLifeFishOnRiver(sizes, directions).Should().Be(expected);
 
         [Theory]
-        [MemberData(nameof(FishData.FishFightFail), MemberType = typeof(FishData))]
-        public void FishFightStakFail(int[] sizes, int[] directions, int expected) =>
+        [MemberData(nameof(FishData.FishesFightStakFail), MemberType = typeof(FishData))]
+        public void FishesFightStakFail(int[] sizes, int[] directions, int expected) =>
             FishesFightStak.CalculateLifeFishOnRiver(sizes, directions).Should().Be(expected);
 
         [Theory]
-        [MemberData(nameof(FishData.FishFightSuccess), MemberType = typeof(FishData))]
+        [MemberData(nameof(FishData.FishesFightQueueSuccess), MemberType = typeof(FishData))]
         public void FishFightQueueSuccess(int[] sizes, int[] directions, int expected) => 
             FishesFightQueue.CalculateLifeFishOnRiver(sizes, directions).Should().Be(expected);
 
         [Theory]
-        [MemberData(nameof(FishData.FishFightFail), MemberType = typeof(FishData))]
+        [MemberData(nameof(FishData.FishesFightQueueFail), MemberType = typeof(FishData))]
         public void FishFightQueueFishFail(int[] sizes, int[] directions, int expected) => 
             FishesFightQueue.CalculateLifeFishOnRiver(sizes, directions).Should().Be(expected);
     }
