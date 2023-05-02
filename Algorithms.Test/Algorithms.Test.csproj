@@ -27,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CyclicRotation\" />
     <Folder Include="OddOccurrencesInArray\" />
   </ItemGroup>
 
