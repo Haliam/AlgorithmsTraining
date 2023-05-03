@@ -2,17 +2,20 @@
 {
     public static class CyclicRotationArrayGpt
     {
-        public static int[] GetRotatedArray(int K, int[] A )
+        public static int[] GetRotatedArray(int k, int[] array )
         {
-            int n = A.Length;
+            if (!CyclicRotationValidation.IsValid(k, array))
+                return Array.Empty<int>();
+
+            int n = array.Length;
 
             int[] rotated = new int[n];
 
             for (int i = 0; i < n; i++)
             {
-                int j = (i + K) % n;
+                int j = (i + k) % n;
 
-                rotated[j] = A[i];
+                rotated[j] = array[i];
             }
 
             return rotated;
