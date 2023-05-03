@@ -6,7 +6,7 @@
         [MemberData(nameof(CyclicRotationData.CyclicRotationSuccess), MemberType = typeof(CyclicRotationData))]
         public void CyclicRotationSuccess(int k, int[] array, int[] expected)
         {
-            var result = CyclicRotationArray.Rotate(k, array);
+            var result = CyclicRotationArray.GetRotatedArray(k, array);
 
             result.Should().BeEquivalentTo(expected);
         }
@@ -15,7 +15,7 @@
         [MemberData(nameof(CyclicRotationData.CyclicRotationFail), MemberType = typeof(CyclicRotationData))]
         public void CyclicRotationFail(int k, int[] array, int[] expected)
         {
-            var result = CyclicRotationArray.Rotate(k, array);
+            var result = CyclicRotationArray.GetRotatedArray(k, array);
 
             result.Should().BeEquivalentTo(expected);
         }
