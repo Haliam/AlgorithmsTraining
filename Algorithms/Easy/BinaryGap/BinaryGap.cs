@@ -1,6 +1,6 @@
 ﻿namespace Algorithms.Easy.BinaryGap
 {
-    public static class CountZeros
+    public static class BinaryGap
     {
         public static int MaxZerosBetweenOnes(string binaryNumber)
         {

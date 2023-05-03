@@ -1,8 +1,6 @@
 ﻿using Algorithms.Easy.BinaryGap;
 
-namespace Algorithms.Easy.CountZeros;
-
-public static class CountZerosGpt
+public static class BinaryGapGpt
 {
     public static int MaxZerosBetweenOnes(string binaryNumber)
     {

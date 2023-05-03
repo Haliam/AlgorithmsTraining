@@ -1,8 +1,8 @@
 namespace Algorithms.Test;
 
-public class CountZerosData
+public class BinaryGapData
 {
-    public static IEnumerable<object[]> CountZerosSuccess =>
+    public static IEnumerable<object[]> BinaryGapSuccess =>
         new List<object[]>
         {
             new object[]
