@@ -6,7 +6,7 @@ namespace Algorithms.Test
     {
         [Theory]
         [MemberData(nameof(OddOccurrencesData.OddOccurrencesSuccess), MemberType = typeof(OddOccurrencesData))]
-        public void FishesFightSuccess(int[] array, int expected) => 
+        public void OddOccurrencesSuccess(int[] array, int expected) => 
             OddOccurrences.GetUnpairElement(array).Should().Be(expected);
     }
 }

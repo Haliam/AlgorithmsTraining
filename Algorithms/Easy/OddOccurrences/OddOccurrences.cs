@@ -4,10 +4,17 @@
     {
         public static int GetUnpairElement(int[] array) 
         {
-            int result = 0;
+            if (!OddOccurrencesValidation.IsValid(array))
+                return -1;
 
+            int unpairElement = 0;
 
-            return result;
+            foreach (int value in array)
+            {
+                unpairElement ^= value;
+            }
+
+            return unpairElement;
         }
     }
 }
