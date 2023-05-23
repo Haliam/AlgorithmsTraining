@@ -1,6 +1,6 @@
 ﻿namespace Algorithms.Easy.BinaryGap
 {
-    public static class BinaryNumberValidation
+    public static class BinaryGapValidation
     {
         public static bool IsValid(string number)
         {

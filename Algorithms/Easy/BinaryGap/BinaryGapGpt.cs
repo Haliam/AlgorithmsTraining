@@ -4,7 +4,7 @@ public static class BinaryGapGpt
 {
     public static int MaxZerosBetweenOnes(string binaryNumber)
     {
-        if (!BinaryNumberValidation.IsValid(binaryNumber))
+        if (!BinaryGapValidation.IsValid(binaryNumber))
             return 0;
 
         int maxZeros = 0;

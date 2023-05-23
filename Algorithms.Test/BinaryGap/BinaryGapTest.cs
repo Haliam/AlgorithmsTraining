@@ -15,6 +15,6 @@ namespace Algorithms.Test
         [Theory]
         [MemberData(nameof(BinaryGapData.BinaryNumberValidationFail), MemberType = typeof(BinaryGapData))]
         public void BinaryNumberValidationFail(string number, bool expected) => 
-            BinaryNumberValidation.IsValid(number).Should().Be(expected);
+            BinaryGapValidation.IsValid(number).Should().Be(expected);
     }
 }
