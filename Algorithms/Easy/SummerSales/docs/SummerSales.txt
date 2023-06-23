@@ -1,0 +1,16 @@
+﻿Summer Sales challenge from CodinGame
+https://www.codingame.com/home
+
+It's almost the summer Sales!
+You work for a shop that wishes to give a discount of discount% to the most expensive item 
+purchased by a gyven customer during the sales period. 
+Only one product can benefit from discount.
+
+You are tasked by the shop owner to implement the method CalculateTotalPrice(prices, discount) 
+which takes the list of prices of products purchased by a customer and the percentage discount as a parameters 
+and return the total purchase price as integer (rounded down if the total is a float number). 
+
+Constraints: 
+0 <= discount <= 100
+0 < price of a product < 100000
+0 < number of products < 100
