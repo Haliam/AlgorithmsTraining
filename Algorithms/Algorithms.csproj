@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Easy\ClosestToZero\docs\" />
+    <Folder Include="Easy\ClosestToZeroTemp\docs\" />
     <Folder Include="Hard\" />
   </ItemGroup>
 
